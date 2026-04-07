@@ -75,86 +75,81 @@ const CaseStudyGrid = () => {
         <Typography variant="overline" align="center" sx={{ letterSpacing: 6, fontWeight: 900, color: 'text.secondary', display: 'block', mb: 1 }}>
           CORE EXPERTISE
         </Typography>
-        <Typography variant="h2" align="center" sx={{ fontSize: { xs: '2.5rem', md: '3.5rem' }, mb: { xs: 8, md: 12 }, fontWeight: 900, letterSpacing: -1.5 }}>
+        <Typography variant="h2" align="center" sx={{ fontSize: { xs: '2.5rem', md: '3.5rem' }, mb: { xs: 8, md: 15 }, fontWeight: 900, letterSpacing: -1.5 }}>
           HR Strategic Portfolio
         </Typography>
 
-        <Grid container spacing={6} justifyContent="center" alignItems="stretch">
+        <Grid container spacing={8}>
           {hrExpertiseData.map((study, index) => {
             const IconComponent = study.icon;
             return (
-              <Grid item xs={12} lg={6} key={index} sx={{ display: 'flex' }}>
+              <Grid item xs={12} key={index}>
                 <Card 
                   elevation={2}
                   sx={{ 
-                    flexGrow: 1,
-                    display: 'flex',
-                    flexDirection: 'column',
                     borderRadius: '16px', 
                     transition: '0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                     '&:hover': {
                       transform: 'translateY(-5px)',
-                      boxShadow: 8, // Slightly stronger shadow for 2-column focus
+                      boxShadow: 8,
                     }
                   }}
                 >
-                  <CardContent sx={{ p: { xs: 4, md: 5 }, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
-                    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 3 }}>
-                      <IconComponent color="primary" sx={{ fontSize: 24 }} />
+                  <CardContent sx={{ p: { xs: 4, md: 6 } }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 4 }}>
+                      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                        <IconComponent color="primary" sx={{ fontSize: 32 }} />
+                        <Typography variant="h5" sx={{ fontWeight: 800, color: 'text.primary', lineHeight: 1.2 }}>
+                          {study.title}
+                        </Typography>
+                      </Box>
                       <Chip 
                         label={study.category} 
                         size="small" 
                         variant="outlined" 
                         color="primary" 
-                        sx={{ fontWeight: 800, fontSize: '0.65rem' }} 
+                        sx={{ fontWeight: 800, fontSize: '0.75rem' }} 
                       />
                     </Box>
 
-                    <Typography variant="h5" sx={{ fontWeight: 800, mb: 1, color: 'text.primary', lineHeight: 1.2 }}>
-                      {study.title}
-                    </Typography>
-
-                    <Typography variant="body2" color="text.secondary" sx={{ mt: 1, mb: 3, lineHeight: 1.7, fontSize: '0.95rem' }}>
+                    <Typography variant="body1" color="text.secondary" sx={{ mb: 4, lineHeight: 1.8, maxWidth: '900px' }}>
                       {study.description}
                     </Typography>
 
-                    <Divider sx={{ mb: 3 }} />
+                    <Divider sx={{ mb: 4 }} />
 
                     <Paper 
                       variant="outlined" 
                       sx={{ 
                         bgcolor: '#f8fafc', 
-                        p: 3, 
-                        borderRadius: 2, 
+                        p: 4, 
+                        borderRadius: 3, 
                         mb: 4,
                         border: '1px solid #E2E8F0',
-                        flexGrow: 1
                       }}
                     >
-                      {study.highlights.map((item, idx) => (
-                        <Box key={idx} sx={{ mb: 2, '&:last-child': { mb: 0 } }}>
-                          <Typography variant="body2" sx={{ lineHeight: 1.6, fontSize: '0.875rem' }}>
-                            <strong>{item.label}:</strong> {item.details}
-                          </Typography>
-                        </Box>
-                      ))}
+                      <Grid container spacing={3}>
+                        {study.highlights.map((item, idx) => (
+                          <Grid item xs={12} md={6} key={idx}>
+                            <Typography variant="body2" sx={{ lineHeight: 1.6, fontSize: '0.9rem' }}>
+                              <strong>{item.label}:</strong> {item.details}
+                            </Typography>
+                          </Grid>
+                        ))}
+                      </Grid>
                     </Paper>
 
-                    <Box sx={{ mt: 'auto' }}>
-                      <Button 
-                        variant="text" 
-                        endIcon={<ArrowForwardIcon />} 
-                        sx={{ 
-                          justifyContent: 'flex-start', 
-                          fontWeight: 900, 
-                          p: 0, 
-                          minWidth: 0,
-                          '&:hover': { bgcolor: 'transparent', color: 'primary.dark' }
-                        }}
-                      >
-                        View Full Details
-                      </Button>
-                    </Box>
+                    <Button 
+                      variant="text" 
+                      endIcon={<ArrowForwardIcon />} 
+                      sx={{ 
+                        fontWeight: 900, 
+                        p: 0, 
+                        '&:hover': { bgcolor: 'transparent', color: 'primary.dark' }
+                      }}
+                    >
+                      View Detailed Case Analysis
+                    </Button>
                   </CardContent>
                 </Card>
               </Grid>
