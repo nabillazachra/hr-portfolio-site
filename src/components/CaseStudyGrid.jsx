@@ -79,11 +79,11 @@ const CaseStudyGrid = () => {
           HR Strategic Portfolio
         </Typography>
 
-        <Grid container spacing={4}>
+        <Grid container spacing={6} justifyContent="center" alignItems="stretch">
           {hrExpertiseData.map((study, index) => {
             const IconComponent = study.icon;
             return (
-              <Grid item xs={12} sm={6} md={4} key={index} sx={{ display: 'flex' }}>
+              <Grid item xs={12} lg={6} key={index} sx={{ display: 'flex' }}>
                 <Card 
                   elevation={2}
                   sx={{ 
@@ -94,11 +94,11 @@ const CaseStudyGrid = () => {
                     transition: '0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                     '&:hover': {
                       transform: 'translateY(-5px)',
-                      boxShadow: 6,
+                      boxShadow: 8, // Slightly stronger shadow for 2-column focus
                     }
                   }}
                 >
-                  <CardContent sx={{ p: 4, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                  <CardContent sx={{ p: { xs: 4, md: 5 }, display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 3 }}>
                       <IconComponent color="primary" sx={{ fontSize: 24 }} />
                       <Chip 
@@ -114,7 +114,7 @@ const CaseStudyGrid = () => {
                       {study.title}
                     </Typography>
 
-                    <Typography variant="body2" color="text.secondary" sx={{ mt: 1, mb: 3, lineHeight: 1.7 }}>
+                    <Typography variant="body2" color="text.secondary" sx={{ mt: 1, mb: 3, lineHeight: 1.7, fontSize: '0.95rem' }}>
                       {study.description}
                     </Typography>
 
@@ -124,15 +124,16 @@ const CaseStudyGrid = () => {
                       variant="outlined" 
                       sx={{ 
                         bgcolor: '#f8fafc', 
-                        p: 2.5, 
+                        p: 3, 
                         borderRadius: 2, 
                         mb: 4,
                         border: '1px solid #E2E8F0',
+                        flexGrow: 1
                       }}
                     >
                       {study.highlights.map((item, idx) => (
                         <Box key={idx} sx={{ mb: 2, '&:last-child': { mb: 0 } }}>
-                          <Typography variant="body2" sx={{ lineHeight: 1.6, fontSize: '0.8125rem' }}>
+                          <Typography variant="body2" sx={{ lineHeight: 1.6, fontSize: '0.875rem' }}>
                             <strong>{item.label}:</strong> {item.details}
                           </Typography>
                         </Box>
