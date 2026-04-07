@@ -2,48 +2,72 @@ import { Box, Typography, Container, TextField, Button, Grid } from '@mui/materi
 
 const InquirySection = () => {
   return (
-    <Box sx={{ bgcolor: '#0B0F1A', py: { xs: 8, md: 12 }, position: 'relative', overflow: 'hidden' }}>
-      {/* Decorative diagonal overlay mentioned in the prompt/implied */}
+    <Box sx={{ bgcolor: '#000000', py: { xs: 8, md: 15 }, position: 'relative', overflow: 'hidden' }}>
+      {/* Decorative diagonal overlay from the design image */}
       <Box 
         sx={{ 
           position: 'absolute', 
           right: 0, 
           top: 0, 
           bottom: 0, 
-          width: '30%', 
-          bgcolor: 'rgba(255, 255, 255, 0.03)', 
-          clipPath: 'polygon(20% 0, 100% 0, 100% 100%, 0% 100%)',
-          display: { xs: 'none', md: 'block' }
+          width: '35%', 
+          bgcolor: 'rgba(255, 255, 255, 0.05)', 
+          clipPath: 'polygon(30% 0, 100% 0, 100% 100%, 0% 100%)',
+          display: { xs: 'none', md: 'block' },
+          zIndex: 1
         }} 
       />
       
-      <Container maxWidth="lg">
-        <Grid container spacing={6}>
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
+        <Grid container>
           <Grid item xs={12} md={8}>
-            <Typography variant="h1" sx={{ color: 'white', fontSize: { xs: '2.5rem', md: '4.5rem' }, fontWeight: 800, mb: 3, lineHeight: 1.1, letterSpacing: -2 }}>
+            {/* Heading: Merriweather Serif as shown in the design */}
+            <Typography 
+              variant="h2" 
+              sx={{ 
+                color: 'white', 
+                fontSize: { xs: '2rem', md: '3.25rem' }, 
+                fontFamily: '"Merriweather", serif',
+                fontWeight: 700, 
+                mb: 3, 
+                lineHeight: 1.2,
+                letterSpacing: -0.5
+              }}
+            >
               Let's strengthen your organizational framework.
             </Typography>
-            <Typography variant="body1" sx={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '1.125rem', mb: 8, maxWidth: 640 }}>
+
+            {/* Subheading: Muted Sans-serif */}
+            <Typography 
+              variant="body1" 
+              sx={{ 
+                color: 'rgba(255, 255, 255, 0.6)', 
+                fontSize: '1.1rem', 
+                mb: 6, 
+                maxWidth: 600,
+                lineHeight: 1.6
+              }}
+            >
               Currently open for strategic consulting or senior-level opportunities in HR and Industrial Relations.
             </Typography>
 
-            <Box component="form" noValidate sx={{ mt: 1 }}>
-              <Grid container spacing={3} sx={{ mb: 4 }}>
+            {/* Optimized Form Layout: Tight Grid (spacing={2}) */}
+            <Box component="form" noValidate sx={{ width: '100%', maxWidth: '750px' }}>
+              <Grid container spacing={2} sx={{ mb: 2.5 }}>
                 <Grid item xs={12} sm={6}>
                   <TextField
                     fullWidth
                     placeholder="Full Name"
-                    variant="filled"
+                    variant="outlined"
                     sx={{
-                      bgcolor: 'rgba(255,255,255,0.05)',
-                      borderRadius: 1,
-                      '& .MuiFilledInput-root': {
+                      bgcolor: '#111827',
+                      '& .MuiOutlinedInput-root': {
                         color: 'white',
-                        '&:before': { borderBottom: 'none' },
-                        '&:after': { borderBottom: 'none' },
-                        '&:hover:not(.Mui-disabled):before': { borderBottom: 'none' },
+                        '& fieldset': { borderColor: '#1e293b' },
+                        '&:hover fieldset': { borderColor: '#334155' },
+                        '&.Mui-focused fieldset': { borderColor: '#D9B061' },
                       },
-                      input: { color: 'white', py: 2.5 }
+                      '& .MuiInputBase-input::placeholder': { color: '#64748b', opacity: 1 }
                     }}
                   />
                 </Grid>
@@ -51,17 +75,16 @@ const InquirySection = () => {
                   <TextField
                     fullWidth
                     placeholder="Email Address"
-                    variant="filled"
+                    variant="outlined"
                     sx={{
-                      bgcolor: 'rgba(255,255,255,0.05)',
-                      borderRadius: 1,
-                      '& .MuiFilledInput-root': {
+                      bgcolor: '#111827',
+                      '& .MuiOutlinedInput-root': {
                         color: 'white',
-                        '&:before': { borderBottom: 'none' },
-                        '&:after': { borderBottom: 'none' },
-                        '&:hover:not(.Mui-disabled):before': { borderBottom: 'none' },
+                        '& fieldset': { borderColor: '#1e293b' },
+                        '&:hover fieldset': { borderColor: '#334155' },
+                        '&.Mui-focused fieldset': { borderColor: '#D9B061' },
                       },
-                      input: { color: 'white', py: 2.5 }
+                      '& .MuiInputBase-input::placeholder': { color: '#64748b', opacity: 1 }
                     }}
                   />
                 </Grid>
@@ -69,33 +92,36 @@ const InquirySection = () => {
                   <TextField
                     fullWidth
                     multiline
-                    rows={4}
+                    rows={6}
                     placeholder="Message"
-                    variant="filled"
+                    variant="outlined"
                     sx={{
-                      bgcolor: 'rgba(255,255,255,0.05)',
-                      borderRadius: 1,
-                      '& .MuiFilledInput-root': {
+                      bgcolor: '#111827',
+                      '& .MuiOutlinedInput-root': {
                         color: 'white',
-                        '&:before': { borderBottom: 'none' },
-                        '&:after': { borderBottom: 'none' },
-                        '&:hover:not(.Mui-disabled):before': { borderBottom: 'none' },
+                        '& fieldset': { borderColor: '#1e293b' },
+                        '&:hover fieldset': { borderColor: '#334155' },
+                        '&.Mui-focused fieldset': { borderColor: '#D9B061' },
                       },
-                      textarea: { color: 'white' }
+                      '& .MuiInputBase-input::placeholder': { color: '#64748b', opacity: 1 }
                     }}
                   />
                 </Grid>
               </Grid>
+
+              {/* Action Button: Exact Gold/Rectangular Style */}
               <Button
                 variant="contained"
                 sx={{
-                  bgcolor: '#D9B061', // The gold/mustard from the screenshots
+                  bgcolor: '#EAC583', // Exact Gold/Cream palette
                   color: 'black',
                   fontWeight: 900,
-                  px: 5,
-                  py: 2,
-                  borderRadius: 1,
-                  '&:hover': { bgcolor: '#C59A4F' }
+                  px: 4.5,
+                  py: 1.8,
+                  borderRadius: '2px', // Professional rectangular look
+                  textTransform: 'none',
+                  fontSize: '1rem',
+                  '&:hover': { bgcolor: '#D9B061' }
                 }}
               >
                 Send Inquiry
