@@ -6,8 +6,8 @@ const Footer = () => {
       <Container maxWidth="lg">
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', alignItems: 'center', gap: 3 }}>
           <Box>
-            <Typography variant="h2" sx={{ fontSize: '1.25rem', fontWeight: 800, mb: 1 }}>The Executive Editorial</Typography>
-            <Typography variant="caption" color="text.secondary">© 2024 The Executive Editorial. Dedicated to building better workplaces.</Typography>
+            <Typography variant="h2" sx={{ fontSize: '1.25rem', fontWeight: 800, mb: 1 }}>Anisah Balqis</Typography>
+            <Typography variant="caption" color="text.secondary">© 2025 Anisah Balqis. Dedicated to building better workplaces.</Typography>
           </Box>
           <Box sx={{ display: 'flex', gap: 4 }}>
             <Link href="#" color="inherit" sx={{ fontSize: '0.875rem', fontWeight: 500 }}>Privacy Policy</Link>

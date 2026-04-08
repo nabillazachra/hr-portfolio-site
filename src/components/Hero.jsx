@@ -1,4 +1,5 @@
 import { Box, Typography, Button, Container } from '@mui/material';
+import heroPortrait from '../assets/hero-portrait.jpg';
 
 const Hero = () => {
   return (
@@ -58,13 +59,13 @@ const Hero = () => {
           <Box sx={{ flex: '0 0 auto', display: { xs: 'none', md: 'flex' }, position: 'relative' }}>
             <Box
               component="img"
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop"
-              alt="Strategic HR Professional Portrait"
+              src={heroPortrait}
+              alt="Anisah Balqis - Strategic HR Professional"
               sx={{
                 width: '100%',
-                maxWidth: 320,
+                maxWidth: 400,
                 height: 'auto',
-                aspectRatio: '1',
+                aspectRatio: '4/5',
                 objectFit: 'cover',
                 borderRadius: '24px',
                 boxShadow: '0 40px 100px -20px rgba(15, 23, 42, 0.2)',

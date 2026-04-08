@@ -1,4 +1,5 @@
 import { Box, Typography, Container } from '@mui/material';
+import aboutPortrait from '../assets/about-portrait.jpg';
 
 const AboutMe = () => {
   return (
@@ -16,12 +17,12 @@ const AboutMe = () => {
           <Box sx={{ flex: '0 0 auto', width: { xs: '100%', md: '400px' }, display: 'flex', justifyContent: 'center' }}>
             <Box
               component="img"
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
-              alt="Strategic HR Executive"
+              src={aboutPortrait}
+              alt="Anisah Balqis - Strategic HR Executive"
               sx={{
                 width: '100%',
                 height: 'auto',
-                aspectRatio: '1',
+                aspectRatio: '4/5',
                 objectFit: 'cover',
                 borderRadius: '12px',
                 boxShadow: '0 20px 48px -10px rgba(15, 23, 42, 0.1)',

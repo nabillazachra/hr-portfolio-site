@@ -25,7 +25,7 @@ const Navbar = () => {
               cursor: 'pointer',
             }}
           >
-            The Executive Editorial
+            Anisah Balqis
           </Typography>
 
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 4, alignItems: 'center' }}>
