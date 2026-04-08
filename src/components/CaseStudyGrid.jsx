@@ -12,8 +12,8 @@ const hrExpertiseData = [
   {
     category: "Global HR Operations & Analytics",
     icon: PublicIcon,
-    title: "Strategic Analytics & HQ Alignment",
-    description: "Kategori ini adalah nilai jual utama untuk perusahaan multinasional yang membutuhkan kemampuan analisis data tingkat tinggi.",
+    title: "Global HR Operations & Analytics",
+    description: "Aligning local HR operations with global standards through precise data analytics and comprehensive strategic reporting.",
     highlights: [
       { label: "Global Reporting & Alignment", details: "Personnel Monthly Report, Annual Report, dan Variation Report (TPE HQ)." },
       { label: "Manpower & Budget Planning", details: "Manpower Budget, Cost & Wages Increase Analysis." },
@@ -24,8 +24,8 @@ const hrExpertiseData = [
   {
     category: "Industrial Relations & Compliance",
     icon: GavelIcon,
-    title: "Audit, Legal & Risk Mitigation",
-    description: "Menunjukkan ketegasan dalam menjaga perusahaan agar mematuhi hukum ketenagakerjaan dan memitigasi risiko hukum.",
+    title: "Industrial Relations & Compliance",
+    description: "Ensuring regulatory compliance and mitigating corporate risk through a decisive, ethical, and measured approach to industrial relations.",
     highlights: [
       { label: "Regulatory Compliance", details: "Pembuatan dan eksekusi SK PKB diselaraskan dengan standar HQ (PKB - TPE)." },
       { label: "Corporate Audit", details: "Menangani AUDIT KENU 2024, Audit Stamp - MASTER / Chop Audit, dan SOP HRS." },
@@ -34,10 +34,10 @@ const hrExpertiseData = [
     ]
   },
   {
-    category: "Talent Management",
+    category: "Organizational Development",
     icon: PsychologyIcon,
     title: "Organizational Development",
-    description: "Mengelola siklus hidup karyawan secara komprehensif, dari awal masuk hingga pengembangan karier dan terminasi.",
+    description: "Driving organizational growth through optimized employee lifecycle management, from talent onboarding to strategic offboarding transitions.",
     highlights: [
       { label: "Performance & Succession", details: "Performance Evaluation, Evaluation Seniority, Cultivate Plan, dan Retiring & Succession Plan." },
       { label: "Training & Certification", details: "Training Karyawan, Sertifikasi, Training Report Probation, Kursus Bahasa." },
@@ -48,8 +48,8 @@ const hrExpertiseData = [
   {
     category: "Employee Well-being",
     icon: FavoriteIcon,
-    title: "Safety & Engagement",
-    description: "Membuktikan empati dan kemampuan membangun budaya kerja positif, esensial bagi HR modern.",
+    title: "Employee Well-being",
+    description: "Fostering a physically and psychologically safe work environment through well-being initiatives to sustain productivity and employee retention.",
     highlights: [
       { label: "Health & Safety", details: "MCU Health Checking dan Mental Health Checking." },
       { label: "Corporate Culture", details: "Annual/Year End Party, Acara 17 Agustus, Social Club, CSR." },
@@ -59,8 +59,8 @@ const hrExpertiseData = [
   {
     category: "Expatriate Management",
     icon: FlightTakeoffIcon,
-    title: "Cross-Cultural HR Admin",
-    description: "Niche skill yang dihargai tinggi, melibatkan regulasi imigrasi dan adaptasi lintas budaya.",
+    title: "Expatriate Management (Cross-Cultural HR Admin)",
+    description: "Facilitating seamless global mobility through integrated immigration compliance and cross-cultural adaptation support.",
     highlights: [
       { label: "Expat Onboarding", details: "Penanganan New Expat Arrival." },
       { label: "Expat Administration", details: "Pengelolaan dokumen dan kebutuhan terkait (PPT Expat)." }
